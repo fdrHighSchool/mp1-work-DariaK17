@@ -6,14 +6,14 @@
  * @version (a version number or a date)
  */
 
-    import java.util.Scanner;
+import java.util.Scanner;
 
 public class callculator 
 {
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
         
-        System.out.print("Simple adding calculator");
+        System.out.print("Simple calculator");
         System.out.println(". ");
         
         System.out.print("Enter your first number ");
@@ -21,8 +21,16 @@ public class callculator
         
         System.out.print("Enter your second number ");
         int num2 = input.nextInt();
-        
-        System.out.println(num1 + num2);
+        System.out.print("What do you want to do with this numbers? ");
+        String com = input.next();
+
+        if (com.equals("add")) {
+            System.out.println(num1 + num2);
+        }
+        if(com.equals("substranct")) {
+            System.out.println(num1 - num2);
+        }   
+        //System.out.println(num1 + num2);
             
     } // end main method
 
