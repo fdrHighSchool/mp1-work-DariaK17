@@ -54,8 +54,8 @@ public class rng
     
         // if the player didn't guess incorrectly (meaning, correct guess)
     }
-     {
-        System.out.println("Correct!!!");
-        } // end outer else statement
+     
+    System.out.println("Correct!!!");
+        
     } // end main method
 } // end class
