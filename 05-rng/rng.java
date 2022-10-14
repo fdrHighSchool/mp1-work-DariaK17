@@ -13,7 +13,7 @@ public class rng
     public static void main(String[] args) {
         Scanner s = new Scanner(System.in);
         
-        System.out.print("On what diffucalty you want to play. Easy, Medium, Hard");
+        System.out.print("On what diffucalty you want to play. Easy, Medium, Hard? ");
         String mode = s.nextLine();
         mode = mode.toLowerCase();
         int max;
@@ -36,19 +36,26 @@ public class rng
         int playerGuess = s.nextInt();
         
         // if the player guessed incorrectly
+        while (playerGuess != mysteryNumber){
         if(playerGuess != mysteryNumber) {
             // if the player guessed too low
             if(playerGuess < mysteryNumber) {
                 System.out.println("You were off by " + (mysteryNumber - playerGuess));
+                System.out.print("Enter your guess: ");
+                playerGuess = s.nextInt();
             } // end inner if statement
             // if the player didn't guess too low (meaning, incorrect and too high!)
             else {
                 System.out.println("You were off by " + (playerGuess - mysteryNumber));
+                System.out.print("Enter your guess: ");
+                playerGuess = s.nextInt();
             } // end inner else statement
         } // end outer if statement
+    
         // if the player didn't guess incorrectly (meaning, correct guess)
-        else {
-            System.out.println("Correct!!!");
+    }
+     {
+        System.out.println("Correct!!!");
         } // end outer else statement
     } // end main method
 } // end class
