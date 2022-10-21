@@ -6,7 +6,7 @@
  * @version (a version number or a date)
  */
 import java.util.Scanner;
-
+import java.util.Random ;
 public class UserName {
   public static void main(String[] args) {
     // create Scanner object
@@ -26,23 +26,40 @@ public class UserName {
     q= q.toLowerCase();
     if (q.equals ("student")){
         System.out.println(firstName + initialize(lastName) + favNum + "@nycstudents.net");
-    }
+    }// end if 
     else{
          System.out.println(initialize(firstName) + lastName + favNum + "@schools.nyc.gov");
-    }
+    }// end else 
+    System.out.print("What length would you like your password to be? ");
+    int length = s.nextInt();
+    gPass(length);
     s.close();
-    
-  } // end main method
+ 
+    } // end main 
 
-  /*
+  public static String gPass (int length) {
+    String password = "";
+        for (int i = 0; i < length; i++) {
+          int num0 = (int)(Math.random()*(122 - 97 +1)+97);
+          int num1 = (int)(Math.random()*(90-65 +1)+65);
+          int num2 = (int)(Math.random()*(57-48 +1)+48);
+          int num = num0 + num1 +num2;
+          char c = (char) num;
+          password += c;
+          
+    }
+        System.out.print("Your password is " + password + ".   ");
+        return password;
+  }
+    /*
    * Name: initialize
    * Purpose: send back the first character (inital) of a name
    * Input: a name (String)
    * Return: a single character (String)
    */
-  public static String initialize(String n) {
-    return n.substring(0, 1);
-  } // end initialize method
+    public static String initialize(String n) {
+        return n.substring(0, 1);
+    } // end initialize method
 
 } // end class
 
