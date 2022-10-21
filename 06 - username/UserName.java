@@ -43,10 +43,19 @@ public class UserName {
           int num0 = (int)(Math.random()*(122 - 97 +1)+97);
           int num1 = (int)(Math.random()*(90-65 +1)+65);
           int num2 = (int)(Math.random()*(57-48 +1)+48);
-          int num = num0 + num1 +num2;
-          char c = (char) num;
-          password += c;
-          
+          char c = (char) num0;
+          char c1 = (char) num1;
+          char c2 = (char) num2;
+          int num = (int)(Math.random()*(3 - 1 +1)+1);
+          if (num == 1) {
+              password += c;
+            }
+          else if (num == 2){
+              password += c1;
+          }
+          else {
+              password += c2;
+          }
     }
         System.out.print("Your password is " + password + ".   ");
         return password;
