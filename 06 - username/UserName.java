@@ -40,20 +40,22 @@ public class UserName {
   public static String gPass (int length) {
     String password = "";
         for (int i = 0; i < length; i++) {
-          int num0 = (int)(Math.random()*(122 - 97 +1)+97);
-          int num1 = (int)(Math.random()*(90-65 +1)+65);
-          int num2 = (int)(Math.random()*(57-48 +1)+48);
-          char c = (char) num0;
-          char c1 = (char) num1;
-          char c2 = (char) num2;
+
           int num = (int)(Math.random()*(3 - 1 +1)+1);
           if (num == 1) {
+              int num0 = (int)(Math.random()*(122 - 97 +1)+97);
+              char c = (char) num0;
               password += c;
             }
           else if (num == 2){
+              int num1 = (int)(Math.random()*(90-65 +1)+65);
+              char c1 = (char) num1;
+              
               password += c1;
           }
           else {
+              int num2 = (int)(Math.random()*(57-48 +1)+48);
+              char c2 = (char) num2;
               password += c2;
           }
     }
