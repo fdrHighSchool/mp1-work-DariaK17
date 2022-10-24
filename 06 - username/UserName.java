@@ -59,7 +59,7 @@ public class UserName {
               password += c2;
           }
     }
-        System.out.print("Your password is " + password + ".   ");
+        System.out.println("Your password is " + password + ".");
         return password;
   }
     /*
