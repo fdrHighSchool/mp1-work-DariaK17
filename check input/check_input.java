@@ -37,6 +37,10 @@ public class check_input
         int y2 = (getY(point2));
         System.out.println("The x value is " + x1);
         System.out.println("The y value is " + y1);
+        System.out.println("The 2x value is " + x2);
+        System.out.println("The 2y value is " + y2);
+        
+        System.out.println("The distance between two points is " + Dist(x1, y1,x2, y2));
    }// end of main
     //N: Check input
     //P: determine wether or not the input folow correct format
@@ -76,8 +80,9 @@ public class check_input
          
     return Integer.parseInt(y);   
    }//end of getY method
+   public static double Dist(int x1, int y1, int x2, int y2) {
+    return Math.sqrt(Math.pow(x1 - x2, 2) + Math.pow(y1 - y2, 2)); 
+    }
 
-
-
-}  // end of class
+    }  // end of class
 
