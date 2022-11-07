@@ -2,9 +2,9 @@
 ## fall-22-mp1-work
 
 
-### Last Name:  
-### First Name: 
-### GitHub Username: 
+### Last Name:  Khandueva
+### First Name: Daria
+### GitHub Username: DariaK17
 
 ---
 #### General Workflow: 
